@@ -13,18 +13,7 @@ st.title("🤖 Customer Clustering & Prediction Dashboard (Updated Inputs)")
 
 # ----- Utility / Load -----
 @st.cache_resource
-def load_data_and_models():
     # Try a few common filenames used in your notebook
-    df = None
-    for fname in ("Test.csv", "test.csv", "Test.CSV", "data.csv", "Test_data.csv"):
-        try:
-            df = pd.read_csv(fname)
-            break
-        except FileNotFoundError:
-            continue
-    if df is None:
-        st.error("Could not find 'Test.csv' (or similar) in the working directory. Please upload or place the dataset file alongside the app.")
-        return None, None, None, None
 
     # Basic cleaning / filling as in your notebook
     df["Ever_Married"] = df.get("Ever_Married", pd.Series()).fillna('Yes')
