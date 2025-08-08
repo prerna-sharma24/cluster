@@ -5,4 +5,5 @@ scikit-learn
 fcmeans
 scikit-fuzzy
 joblib
+matplotlib
 
